@@ -14,7 +14,7 @@ Este repositório contém os scripts e notebooks desenvolvidos para o Trabalho d
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/meu-tcc.git
+git clone https://github.com/palomacha100/tcc-vilas-favelas-bh.git
 ```
 
 2. Instale as dependências:
