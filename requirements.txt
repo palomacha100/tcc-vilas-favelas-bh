@@ -1,3 +1,6 @@
 pandas
 boto3
+geopandas
+shapely
+folium
 
