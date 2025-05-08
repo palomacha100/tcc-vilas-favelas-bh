@@ -3,4 +3,7 @@ boto3
 geopandas
 shapely
 folium
+fuzzywuzzy[speedup]
+unicode
+unidecode
 
