@@ -5,7 +5,7 @@ s3 = boto3.client('s3')
 
 bucket_name = 'tcc-eng-software-vilas-favelas-bh'
 file_name = './data/raw/vilas-favelas-bh.csv'
-object_key = 'bronze/vilas-favelas-bh.csv'
+object_key = 'raw/vilas-favelas-bh.csv'
 
 s3.upload_file(file_name, bucket_name, object_key)
 
