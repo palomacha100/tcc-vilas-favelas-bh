@@ -29,4 +29,4 @@ jobs:
           git config --global user.name "glue-bot"
           git add notebooks/
           git commit -m "Update glue notebook" || echo "Nothing to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/palomacha100/tcc-vilas-favelas-bh.git
