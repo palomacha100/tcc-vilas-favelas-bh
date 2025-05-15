@@ -23,6 +23,22 @@ jobs:
           mkdir -p notebooks
           aws s3 cp s3://aws-glue-assets-710271939024-us-east-1/notebooks/ notebooks/ --recursive
 
+      - name: Install papermill
+        run: pip install papermill
+
+      - name: Run notebooks for testing
+        run: |
+          for nb in $(find notebooks/ -name "*.ipynb"); do
+            echo "Executando $nb"
+            papermill "$nb" /dev/null
+          done
+
+      - name: Save version with timestamp
+        run: |
+          for nb in $(find notebooks/ -name "*.ipynb"); do
+            cp "$nb" "${nb%.ipynb}_$(date +%Y%m%d%H%M%S).ipynb.bak"
+          done
+
       - name: Commit changes
         run: |
           git config --global user.email "bot@github.com"
@@ -30,3 +46,4 @@ jobs:
           git add notebooks/
           git commit -m "Update glue notebook" || echo "Nothing to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/palomacha100/tcc-vilas-favelas-bh.git
+
