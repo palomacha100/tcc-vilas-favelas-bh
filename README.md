@@ -7,7 +7,6 @@ Este repositório contém os scripts e notebooks desenvolvidos para o Trabalho d
 - `notebooks/`: Notebooks Jupyter com análises e visualizações.
 - `scripts/`: Scripts Python para processar dados.
 - `data/raw/`: Dados originais.
-- `data/processed/`: Dados transformados.
 - `figures/`: Gráficos e imagens geradas para o TCC.
 
 ## Como rodar
